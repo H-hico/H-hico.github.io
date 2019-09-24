@@ -1,10 +1,38 @@
  <!DOCTYPE html>
   <html>
     <head>
+    <style>
+    body{
+      background-color: #00CDCD;
+    }
+    #name  {
+    color: black;
+    margin: 0 auto;
+    width: 350px;
+    padding: 3px;
+
+    }
+     #mail  {
+    color: black;
+    margin: 0 auto;
+    width: 350px;
+    padding: 3px;
+   
+    }
+     #msg  {
+      color: black;
+    margin: 0 auto;
+    width: 350px;
+    padding: 3px;
+   
+    }
+     
+    </style>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <link rel="manifest"  href="/manifest.json">
 
       <meta charset="utf-8">
 
@@ -24,6 +52,29 @@
         <li><a href="pages/contato.html">Contato</a></li>
       </ul>
     </div>
+  
+        <form action="cadastre suas Informações" method="post">
+
+    <div id="name">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" />
+    </div>
+    <div id="mail">
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" />
+    </div>
+    <div id="msg">
+        <label for="msg">Mensagem:</label>
+        <textarea id="msg"></textarea>
+         <div id="msg">
+        <label for="msg">Senha:</label>
+        <textarea id="msg"></textarea>
+    </div>
+    <div class="button">
+        <button type="submit">Enviar sua mensagem</button>
+    </div>
+</form>
+  
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
