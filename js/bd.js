@@ -7,7 +7,7 @@ db.enablePersistence()
         }
     });
 
-db.collection('sobremesas').onSnapshot(snapshot => {
+db.collection('Tecnico').onSnapshot(snapshot => {
     snapshot.docChanges().forEach(change => {
         if (change.type === 'added') {
             renderRecipe(change.doc.data(), change.doc.id);
