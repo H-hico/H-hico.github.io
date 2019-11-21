@@ -16,3 +16,23 @@ db.collection('Tecnico').onSnapshot(snapshot => {
         }
     });
 });
+// adicionar nova area
+const form = document.querySelector('form');
+form.addEventListener('submit', evt => {
+    evt.preventDefault();
+
+    const Tecnico = {
+        nome: form.AreaNome.value,
+        descricao: form.AreaDescricao.value,
+        endereco_imagem: form.sobremesaArquivo.value
+    };
+
+    db.collection('tecnicos').add(tecnico)
+        .catch(err => console.log(err));
+
+    //reseta o formulario
+    form.AreaNome.value = '';
+    form.sAreaDescricao.value = '';
+    form.sobremesaArquivo.value = '';
+
+});
