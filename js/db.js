@@ -22,17 +22,17 @@ form.addEventListener('submit', evt => {
     evt.preventDefault();
 
     const Tecnico = {
-        Area: form.AreaNome.value,
-        Descricao: form.AreaDescricao.value,
-        Endereco_imagem: form.sobremesaArquivo.value
+        Area: form.TecnicoNome.value,
+        Descricao: form.TecnicoDescricao.value,
+        Endereco_imagem: form.TecnicoArquivo.value
     };
 
-    db.collection('tecnicos').add(tecnico)
+    db.collection('Tecnico').add(Tecnico)
         .catch(err => console.log(err));
 
     //reseta o formulario
-    form.AreaNome.value = '';
-    form.sAreaDescricao.value = '';
-    form.sobremesaArquivo.value = '';
+    form.TecnicoNome.value = '';
+    form.TecnicoDescricao.value = '';
+    form.TecnicoArquivo.value = '';
 
 });
