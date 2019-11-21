@@ -22,9 +22,9 @@ form.addEventListener('submit', evt => {
     evt.preventDefault();
 
     const Tecnico = {
-        nome: form.AreaNome.value,
-        descricao: form.AreaDescricao.value,
-        endereco_imagem: form.sobremesaArquivo.value
+        Area: form.AreaNome.value,
+        Descricao: form.AreaDescricao.value,
+        Endereco_imagem: form.sobremesaArquivo.value
     };
 
     db.collection('tecnicos').add(tecnico)
