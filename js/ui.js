@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
 const desenhaCard = (data, id) => {
 
     const html = `
-  <div class="col s12 m6 l3 area " data-id="${id}">
+  <div class="col s12 m6 l3  " data-id="${id}">
 	    <div class="card" style="background-color: #A59C94FF;">
 		    <div class="card-image area-imagem">
-	            <img src="images/${data.endereco_imagem}">
-	            <span class="card-title area-nome">"${data.nome}"</span>
+	            <img src="images/${data.Endereco_imagem}">
+	            <span class="card-title Area-Nome">"${data.Area}"</span>
 	        </div>
-	        <div class="card-content area-descricao">
-	            <p>"${data.descricao}"</p>
+	        <div class="card-content Area-Descricao">
+	            <p>"${data.Descricao}"</p>
 	        </div>
 	        <div class="area-deletar">
                 <i class="material-icons" data-id="${id}">delete_outline</i>
