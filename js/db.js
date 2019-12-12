@@ -10,9 +10,10 @@ db.enablePersistence()
 db.collection('Tecnico').onSnapshot(snapshot => {
     snapshot.docChanges().forEach(change => {
         if (change.type === 'added') {
-            renderRecipe(change.doc.data(), change.doc.id);
+            desenhaCard(change.doc.data(), change.doc.id);
         }
         if (change.type === 'removed') {
+           removeCard(change.doc.id);
         }
     });
 });
@@ -36,3 +37,12 @@ form.addEventListener('submit', evt => {
     form.TecnicoArquivo.value = '';
 
 });
+// remove a recipe
+const sobremesas1 = document.querySelector('.tecnicos');
+sobremesas1.addEventListener('click', evt => {
+  if(evt.target.tagName === 'I'){
+    const id = evt.target.getAttribute('data-id');
+    //console.log(id);
+    db.collection('Tecnico').doc(id).delete();
+  }
+})
